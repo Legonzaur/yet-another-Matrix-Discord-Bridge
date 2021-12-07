@@ -1,0 +1,31 @@
+{
+  "name": "yet-another-matrix-discord-bridge",
+  "version": "1.0.0",
+  "description": "Yet Another Unfinished Project",
+  "main": "send_discord_message.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "env $(cat .env.dev | grep -v \"#\" | xargs) nodemon",
+    "register": "env $(cat .env | grep -v \"#\" | xargs) ts-node ./src/registration.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Legonzaur/yet-another-Matrix-Discord-Bridge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Legonzaur/yet-another-Matrix-Discord-Bridge/issues"
+  },
+  "homepage": "https://github.com/Legonzaur/yet-another-Matrix-Discord-Bridge#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.12",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "matrix-appservice": "^0.10.0"
+  }
+}
