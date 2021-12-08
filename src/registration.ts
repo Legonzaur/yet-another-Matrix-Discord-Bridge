@@ -7,6 +7,7 @@ reg.setHomeserverToken(AppServiceRegistration.generateToken());
 reg.setAppServiceToken(AppServiceRegistration.generateToken());
 reg.setSenderLocalpart("yamdb-appservice");
 reg.setId("yamdb");
-reg.addRegexPattern("users", "@.*", true);
+reg.addRegexPattern("users", "@_discord_.*", true);
+reg.addRegexPattern("aliases", "#_discord_.*", true);
 reg.setProtocols(["discord"]); // For 3PID lookups
 reg.outputAsYaml("registration.yaml");

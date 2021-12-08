@@ -1,4 +1,4 @@
-import * as https from "https";
+import { post } from "../requests";
 
 interface WebhookData {
   content?: string;
@@ -7,30 +7,5 @@ interface WebhookData {
 }
 
 export default function sendDiscordMessage(data: WebhookData) {
-  let stringified = JSON.stringify(data);
-  console.log(stringified);
-  const options = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      // "Content-Length": stringified.length,
-    },
-  };
-
-  const req = https.request(process.env.WEBHOOK as string, options, (res) => {
-    console.log(`statusCode: ${res.statusCode}`);
-
-    res.on("data", (d) => {
-      process.stdout.write(d);
-    });
-  });
-
-  req.on("error", (error) => {
-    console.error(error);
-  });
-
-  req.write(stringified);
-  req.end();
+  post(process.env.WEBHOOK as string, data);
 }
-
-console.log(process.env.WEBHOOK);
