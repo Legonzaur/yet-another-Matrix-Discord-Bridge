@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "matrix-appservice": "^0.10.0",
+    "matrix-appservice-bridge": "^3.2.0",
     "yaml": "^1.10.2"
   }
 }

@@ -1,0 +1,12 @@
+id: a7fe9d810f1e65d7f8521c5cefd72dd8aa4c432206ef6a60c96dfc653660e9c4
+hs_token: ac4aff4481fd951f3280c749acc4f0d896413164e78189f7d9de94688a757f3f
+as_token: 373c5a62b4033a168c9c9e9ffc0c23097ed77a016a09d2c4f3e59452366f7a02
+url: http://192.168.1.128:9000
+sender_localpart: discord_bot
+namespaces:
+  users:
+    - exclusive: true
+      regex: "@_discord_.*"
+  aliases:
+    - exclusive: true
+      regex: "#_discord_.*"

@@ -17,8 +17,6 @@ async function request(
     };
 
     const req = https.request(url, options, (res) => {
-      console.log(`statusCode: ${res.statusCode}`);
-
       res.on("data", (d) => {
         resolve({ code: res.statusCode, content: d.toString() });
       });
@@ -47,8 +45,6 @@ export async function get(
     };
 
     const req = https.request(url, options, (res) => {
-      console.log(`statusCode: ${res.statusCode}`);
-
       res.on("data", (d) => {
         resolve({ code: res.statusCode, content: d.toString() });
       });
